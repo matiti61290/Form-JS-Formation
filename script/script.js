@@ -60,4 +60,5 @@ form.addEventListener("submit", function(event) {
         return;
     }
     addCommentToList()
+    form.reset()
 })
