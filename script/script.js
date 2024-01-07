@@ -9,8 +9,6 @@ function validate() {
     return firstName.value.length && lastName.value.length && comment.value.length;
 }
 
-
-
 function addCommentToList() {
     //Create the first div
     let commentList = document.getElementById("comment-list");
@@ -39,16 +37,12 @@ function addCommentToList() {
     commentList.appendChild(commentArea);
 }
 
-
-
 //function to display the error message if nothing is written in one field
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     if(validate() == 0){
         let errorMessage = document.getElementById("error-message");
         errorMessage.style.display = "block";
-
         return;
     }
-    addCommentToList()
 })
